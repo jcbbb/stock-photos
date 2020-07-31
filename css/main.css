@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Muli", sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 990px;
+  margin: auto;
+}
+
+.header {
+  padding: 20px;
+}
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.header__btn {
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #2E3336;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 36px;
+  border-radius: 5px;
+  box-shadow: 0 11px 14px -12px #4f575d;
+  cursor: pointer;
+}
+
+.nav {
+  width: min-content;
+  margin-left: auto;
+}
+.nav__links {
+  display: flex;
+  margin: -10px;
+}
+.nav__link-item {
+  margin: 10px;
+}
+.nav__link {
+  color: #2E3336;
+  position: relative;
+  display: block;
+  padding: 8px;
+}
+.nav__link:after {
+  content: "";
+  position: absolute;
+  background: #2E3336;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 320ms ease-in-out;
+}
+.nav__link:hover:after {
+  width: 40%;
+}
+
+.form-group {
+  position: relative;
+  border-bottom: 1px solid #9BAAB7;
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+
+.form-icon {
+  font-size: 24px;
+  height: 24px;
+}
+
+.form-input {
+  border: none;
+  outline: none;
+  color: #2E3336;
+  padding: 12px 8px;
+  font-size: 16px;
+  width: 100%;
+}
+.form-input::placeholder {
+  color: #9BAAB7;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  justify-content: center;
+}
+.cards__card {
+  margin: 10px;
+  position: relative;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+.cards__card:hover .cards__card-info {
+  bottom: 4px;
+}
+.cards__card-image-container {
+  max-width: 100%;
+}
+.cards__card-info {
+  position: absolute;
+  background: rgba(19, 35, 52, 0.3);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: all 320ms ease-in-out;
+  bottom: -60px;
+}
+.cards__card-info-icon {
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav {
+    margin: auto;
+  }
+
+  .header__btn {
+    display: none;
+  }
+  .header__bottom {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
